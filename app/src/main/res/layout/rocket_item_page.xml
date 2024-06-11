@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_gray">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/header_height"
+            app:layout_scrollFlags="snap|scroll">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                tools:ignore="contentDescription" />
+        </FrameLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:background="@color/black">
+
+            <TextView
+                android:id="@+id/rocketName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/start_margin"
+                android:textColor="@color/white"
+                android:textSize="@dimen/rocket_name_text_size"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Falcon Heavy" />
+
+            <ImageView
+                android:id="@+id/settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/start_margin"
+                android:src="@drawable/icons8_settings_32"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="contentDescription" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/parameters"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/start_margin"
+                android:layout_marginVertical="@dimen/start_margin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rocketName"
+                tools:background="@color/gray"/>
+
+            <TextView
+                android:id="@+id/firstFlight"
+                style="@style/TextViewRocketItem"
+                android:layout_marginTop="@dimen/start_margin"
+                android:text="@string/firstFlight"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/parameters" />
+
+            <TextView
+                android:id="@+id/firstFlightValue"
+                style="@style/TextViewRocketItem"
+                android:layout_marginTop="@dimen/start_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/parameters"
+                tools:text="7 февраля, 2018" />
+
+            <TextView
+                android:id="@+id/country"
+                style="@style/TextViewRocketItem"
+                android:layout_marginTop="@dimen/rocket_margin_between_values"
+                android:text="@string/country"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/firstFlight" />
+
+            <TextView
+                android:id="@+id/countryValue"
+                style="@style/TextViewRocketItem"
+                android:layout_marginTop="@dimen/rocket_margin_between_values"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/firstFlightValue"
+                tools:text="США" />
+
+            <TextView
+                android:id="@+id/costPerLaunch"
+                style="@style/TextViewRocketItem"
+                android:layout_marginTop="@dimen/rocket_margin_between_values"
+                android:text="@string/costPerLaunch"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/country" />
+
+            <TextView
+                android:id="@+id/costPerLaunchValue"
+                style="@style/TextViewRocketItem"
+                android:layout_marginTop="@dimen/rocket_margin_between_values"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/countryValue"
+                tools:text="$90 млн" />
+
+            <!-- Переписать запуски, используя вложения, чтобы не дублировать код -->
+
+            <TextView
+                android:id="@+id/firstStage"
+                style="@style/TextViewRocketSubtitle"
+                android:text="@string/firstStage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/costPerLaunch" />
+
+            <TextView
+                android:id="@+id/firstStageEngines"
+                style="@style/TextViewRocketItem"
+                android:layout_marginTop="@dimen/rocket_margin_between_values"
+                android:text="@string/engine_quantity"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/firstStage" />
+
+            <TextView
+                android:id="@+id/firstStageEnginesValue"
+                style="@style/TextViewRocketItem"
+                android:layout_marginTop="@dimen/rocket_margin_between_values"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/firstStage"
+                tools:text="27" />
+
+            <TextView
+                android:id="@+id/firstStageFuel"
+                style="@style/TextViewRocketItem"
+                android:layout_marginTop="@dimen/rocket_margin_between_values"
+                android:text="@string/fuel_quantity"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/firstStageEngines" />
+
+            <TextView
+                android:id="@+id/firstStageFuelValue"
+                style="@style/TextViewRocketItem"
+                android:layout_marginTop="@dimen/rocket_margin_between_values"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/firstStageEnginesValue"
+                tools:text="308,6 ton" />
+
+            <TextView
+                android:id="@+id/firstStageBurn"
+                style="@style/TextViewRocketItem"
+                android:layout_marginTop="@dimen/rocket_margin_between_values"
+                android:text="@string/burn_time_sec"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/firstStageFuel" />
+
+            <TextView
+                android:id="@+id/firstStageBurnValue"
+                style="@style/TextViewRocketItem"
+                android:layout_marginTop="@dimen/rocket_margin_between_values"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/firstStageFuelValue"
+                tools:text="397 sec" />
+
+            <TextView
+                android:id="@+id/secondStage"
+                style="@style/TextViewRocketSubtitle"
+                android:text="@string/secondStage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/firstStageBurn" />
+
+            <TextView
+                android:id="@+id/secondStageEngines"
+                style="@style/TextViewRocketItem"
+                android:layout_marginTop="@dimen/rocket_margin_between_values"
+                android:text="@string/engine_quantity"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/secondStage" />
+
+            <TextView
+                android:id="@+id/secondStageEnginesValue"
+                style="@style/TextViewRocketItem"
+                android:layout_marginTop="@dimen/rocket_margin_between_values"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/secondStage"
+                tools:text="1" />
+
+            <TextView
+                android:id="@+id/secondStageFuel"
+                style="@style/TextViewRocketItem"
+                android:layout_marginTop="@dimen/rocket_margin_between_values"
+                android:text="@string/fuel_quantity"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/secondStageEngines" />
+
+            <TextView
+                android:id="@+id/secondStageFuelValue"
+                style="@style/TextViewRocketItem"
+                android:layout_marginTop="@dimen/rocket_margin_between_values"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/secondStageEnginesValue"
+                tools:text="243,2 ton" />
+
+            <TextView
+                android:id="@+id/secondStageBurn"
+                style="@style/TextViewRocketItem"
+                android:layout_marginTop="@dimen/rocket_margin_between_values"
+                android:text="@string/burn_time_sec"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/secondStageFuel" />
+
+            <TextView
+                android:id="@+id/secondStageBurnValue"
+                style="@style/TextViewRocketItem"
+                android:layout_marginTop="@dimen/rocket_margin_between_values"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/secondStageFuelValue"
+                tools:text="593 sec" />
+
+            <Button
+                android:id="@+id/launches"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/start_margin"
+                android:background="@drawable/parameter_item_background"
+                android:text="@string/showLaunches"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/secondStageBurn" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">SpaceXClient_SPirin</string>
+    <string name="error_message">Ошибка, проверьте подключение к интернету</string>
+    <string name="firstFlight">Первый запуск</string>
+    <string name="country">Страна</string>
+    <string name="costPerLaunch">Стоимость запуска</string>
+    <string name="firstStage">Первая ступень</string>
+    <string name="engine_quantity">Количество двигателей</string>
+    <string name="fuel_quantity">Количество топлива</string>
+    <string name="burn_time_sec">Время сгорания</string>
+    <string name="secondStage">Вторая ступень</string>
+    <string name="showLaunches">Посмотреть запуски</string>
+    <string name="height_meters">Высота, m</string>
+    <string name="height_feet">Высота, ft</string>
+    <string name="diameter_meters">Диаметр, m</string>
+    <string name="diameter_feet">Диаметр, ft</string>
+    <string name="mass_kg">Масса, kg</string>
+    <string name="mass_lb">Масса, lb</string>
+    <string name="payload_weights_kg">Нагрузка, kg</string>
+    <string name="payload_weights_lb">Нагрузка, lb</string>
+    <string name="ton">ton</string>
+    <string name="sec">sec</string>
+    <string name="mln">млн</string>
+    <string name="settings">Настройки</string>
+    <string name="close">Закрыть</string>
+    <string name="height">Высота</string>
+    <string name="diameter">Диаметр</string>
+    <string name="mass">Масса</string>
+    <string name="payload_weights">Полезная нагрузка</string>
+    <string name="m">m</string>
+    <string name="ft">ft</string>
+    <string name="kg">kg</string>
+    <string name="lb">lb</string>
+    <string name="back">Назад</string>
+    <string name="launches_error">Запусков не обнаружено</string>
+
+    <string-array name="months">
+        <item>января</item>
+        <item>февраля</item>
+        <item>марта</item>
+        <item>апреля</item>
+        <item>мая</item>
+        <item>июня</item>
+        <item>июля</item>
+        <item>августа</item>
+        <item>сентября</item>
+        <item>октября</item>
+        <item>ноября</item>
+        <item>декабря</item>
+    </string-array>
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/rocketsFragment">
+
+
+    <fragment
+        android:id="@+id/rocketsFragment"
+        android:name="com.example.spacexclient_spirin.presentation.rockets.RocketsFragment"
+        android:label="RocketsFragment"
+        tools:layout="@layout/rockets_fragment_layout" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.spacexclient_spirin.presentation.settings.SettingsFragment"
+        android:label="SettingsFragment"
+        tools:layout="@layout/settings_fragment_layout" />
+    <fragment
+        android:id="@+id/launchesFragment"
+        android:name="com.example.spacexclient_spirin.presentation.launches.LaunchesFragment"
+        android:label="LaunchesFragment"
+        tools:layout="@layout/launches_fragment_layout">
+    </fragment>
+    <fragment
+        android:id="@+id/errorFragment"
+        android:name="com.example.spacexclient_spirin.presentation.error.ErrorFragment"
+        android:label="ErrorFragment"
+        tools:layout="@layout/error_fragment_layout" />
+
+</navigation>

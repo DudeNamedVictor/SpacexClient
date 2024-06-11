@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextViewRocketSubtitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/start_margin</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/rocket_subtitle_text_size</item>
+    </style>
+
+    <style name="TextViewRocketItem">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal">@dimen/start_margin</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/rocket_text_size</item>
+    </style>
+
+    <style name="ParameterTitleTextViewRocketItem" parent="TextViewRocketItem">
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginHorizontal">@dimen/margin_text_in_parameters</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="ParameterItemTextViewRocketItem">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal">@dimen/margin_text_in_parameters</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:textSize">@dimen/parameter_item_text_size</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="SettingsItems">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/settings_margin_start</item>
+        <item name="android:layout_marginVertical">@dimen/settings_margin_vertical</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/settings_item_text_size</item>
+    </style>
+
+    <style name="SettingsSwitch">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal">@dimen/settings_margin_start</item>
+        <item name="android:textSize">@dimen/switch_text_size</item>
+        <item name="android:thumb">@drawable/switch_thumb_selector</item>
+    </style>
+
+    <style name="SwitchTextAppearance" parent="@android:style/TextAppearance.Holo.Small">
+        <item name="android:textColor">@drawable/switch_text_color_selector</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="header_height">280dp</dimen>
+    <dimen name="worms_indicator_height">72dp</dimen>
+    <dimen name="start_margin">32dp</dimen>
+    <dimen name="rocket_margin_between_values">14dp</dimen>
+    <dimen name="progress_size">40dp</dimen>
+    <dimen name="parameter_width_item_size">128dp</dimen>
+    <dimen name="parameter_height_item_size">120dp</dimen>
+    <dimen name="margin_text_in_parameters">12dp</dimen>
+
+    <dimen name="settings_margin_start">20dp</dimen>
+    <dimen name="settings_margin_vertical">32dp</dimen>
+    <dimen name="settings_top_margin">100dp</dimen>
+
+    <dimen name="launches_item_margin">16dp</dimen>
+    <dimen name="launches_item_height">104dp</dimen>
+    <dimen name="launches_item_logo_size">42dp</dimen>
+    <dimen name="launches_item_margin_start">28dp</dimen>
+    <dimen name="launches_recycler_top">108dp</dimen>
+    <dimen name="launches_recycler_horizontal">12dp</dimen>
+
+    <dimen name="rocket_name_text_size">24sp</dimen>
+    <dimen name="rocket_subtitle_text_size">20sp</dimen>
+    <dimen name="rocket_text_size">16sp</dimen>
+    <dimen name="parameter_item_text_size">14sp</dimen>
+    <dimen name="switch_text_size">16sp</dimen>
+    <dimen name="launches_item_text_size">20sp</dimen>
+    <dimen name="launches_item_data_size">16sp</dimen>
+
+    <dimen name="settings_item_text_size">16sp</dimen>
+</resources>

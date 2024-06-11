@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/black">
+
+    <TextView
+        style="@style/SettingsItems"
+        android:text="@string/settings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/settings_margin_vertical"
+        android:text="@string/close"
+        android:textColor="@color/white"
+        android:textSize="@dimen/settings_item_text_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/settings_margin_start"
+        android:layout_marginTop="@dimen/settings_top_margin"
+        android:text="@string/height"
+        android:textColor="@color/white"
+        android:textSize="@dimen/settings_item_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/close" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/heightSwitch"
+        style="@style/SettingsSwitch"
+        android:textOff="@string/m"
+        android:textOn="@string/ft"
+        app:layout_constraintBottom_toBottomOf="@+id/height"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@+id/height"
+        app:layout_constraintTop_toTopOf="@+id/height"
+        app:showText="true"
+        app:switchTextAppearance="@style/SwitchTextAppearance"
+        app:track="@drawable/switch_track_selector" />
+
+    <TextView
+        android:id="@+id/diameter"
+        style="@style/SettingsItems"
+        android:layout_marginTop="@dimen/settings_top_margin"
+        android:text="@string/diameter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/height" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/diameterSwitch"
+        style="@style/SettingsSwitch"
+        android:textOff="@string/m"
+        android:textOn="@string/ft"
+        app:layout_constraintBottom_toBottomOf="@+id/diameter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@+id/diameter"
+        app:layout_constraintTop_toTopOf="@+id/diameter"
+        app:showText="true"
+        app:switchTextAppearance="@style/SwitchTextAppearance"
+        app:track="@drawable/switch_track_selector" />
+
+    <TextView
+        android:id="@+id/mass"
+        style="@style/SettingsItems"
+        android:layout_marginTop="@dimen/settings_top_margin"
+        android:text="@string/mass"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diameter" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/massSwitch"
+        style="@style/SettingsSwitch"
+        android:textOff="@string/kg"
+        android:textOn="@string/lb"
+        app:layout_constraintBottom_toBottomOf="@+id/mass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@+id/mass"
+        app:layout_constraintTop_toTopOf="@+id/mass"
+        app:showText="true"
+        app:switchTextAppearance="@style/SwitchTextAppearance"
+        app:track="@drawable/switch_track_selector" />
+
+    <TextView
+        android:id="@+id/payloadWeights"
+        style="@style/SettingsItems"
+        android:layout_marginTop="@dimen/settings_top_margin"
+        android:text="@string/payload_weights"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mass" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/payloadWeightsSwitch"
+        style="@style/SettingsSwitch"
+        android:textOff="@string/kg"
+        android:textOn="@string/lb"
+        app:layout_constraintBottom_toBottomOf="@+id/payloadWeights"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@+id/payloadWeights"
+        app:layout_constraintTop_toTopOf="@+id/payloadWeights"
+        app:showText="true"
+        app:switchTextAppearance="@style/SwitchTextAppearance"
+        app:track="@drawable/switch_track_selector" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

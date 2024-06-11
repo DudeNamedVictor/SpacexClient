@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/launches_item_height"
+    android:layout_margin="@dimen/launches_item_margin"
+    android:background="@drawable/parameter_item_background">
+
+    <TextView
+        android:id="@+id/missionName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/launches_item_margin"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/launches_item_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/date"
+        app:layout_constraintEnd_toStartOf="@+id/resultImage"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="FalconSat" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/launches_item_margin"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/launches_item_data_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/missionName"
+        tools:text="6 января, 2022" />
+
+    <ImageView
+        android:id="@+id/resultImage"
+        android:layout_width="@dimen/launches_item_logo_size"
+        android:layout_height="@dimen/launches_item_logo_size"
+        android:layout_margin="@dimen/launches_item_margin_start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="contentDescription"
+        tools:src="@drawable/svg_rocket_clouds_icon_1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
